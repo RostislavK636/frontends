@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import React from "react";
 import { Header } from "@/app/components/layout/header";
 import "./globals.css";
@@ -6,10 +6,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Агора - Маркетплейс",
   description: "Маркетплейс Агора - купите товары от надежных поставщиков",
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: "/favicon.ico",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
