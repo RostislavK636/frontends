@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
   const navigationLinks = [
     { href: "/", label: "Главная" },
     { href: "/suppliers", label: "Поставщики" },
-    { href: "/products", label: "Товары" },
+    { href: "/suppliers", label: "Каталог" },
   ];
 
   return (
