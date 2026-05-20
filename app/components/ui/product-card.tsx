@@ -21,8 +21,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   showSupplier = true,
   showCategory = false,
 }) => {
-  // Image selection: prefer card image, then image_url
-  const imageUrl = product.card_image_url || product.image_url;
+  // Image selection: prefer main photo from DB, then card image, then fallback
+  const imageUrl = product.image_url || product.card_image_url;
 
   const displayPrice = product.base_price_text || `${product.price} ₽`;
 

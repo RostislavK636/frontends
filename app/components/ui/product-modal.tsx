@@ -29,8 +29,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({
     setErrorMessage(null);
     setSuccessMessage(null);
 
-    // Use card image if available, otherwise image_url
-    const imageUrl = product.card_image_url || product.image_url;
+    // Use main DB image if available, otherwise card image
+    const imageUrl = product.image_url || product.card_image_url;
 
     const success = addItem({
       productId: product.id,
@@ -62,8 +62,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({
     }
   };
 
-  // Image selection: prefer card image, then image_url
-  const imageUrl = product.card_image_url || product.image_url;
+  // Image selection: prefer main DB image, then card image
+  const imageUrl = product.image_url || product.card_image_url;
 
   return (
     <>

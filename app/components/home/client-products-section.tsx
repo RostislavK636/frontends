@@ -21,7 +21,7 @@ export const ClientProductsSection: React.FC<ClientProductsSectionProps> = ({ pr
       name: product.name,
       price: product.price,
       quantity: 1,
-      image: product.card_image_url || product.image_url,
+      image: product.image_url || product.card_image_url,
       supplierId: product.supplier_id,
       supplierName: product.supplierName || "",
     });
