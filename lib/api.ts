@@ -73,8 +73,7 @@ function normalizeProduct(value: unknown): Product | null {
       typeof (value as any).price_image_url === "string" ? (value as any).price_image_url : "",
     base_price_text:
       typeof (value as any).base_price_text === "string" ? (value as any).base_price_text : "",
-    inStock:
-      typeof (value as any).inStock === "boolean" ? (value as any).inStock : true,
+    inStock: typeof (value as any).inStock === "boolean" ? (value as any).inStock : true,
     created_at: typeof (value as any).created_at === "string" ? (value as any).created_at : "",
   };
 }
@@ -135,6 +134,7 @@ export async function fetchAPI<T>(
 ): Promise<APIResponse<T>> {
   try {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      cache: "no-store",
       headers: {
         "Content-Type": "application/json",
         ...options?.headers,
