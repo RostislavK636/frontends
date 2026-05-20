@@ -73,6 +73,8 @@ function normalizeProduct(value: unknown): Product | null {
       typeof (value as any).price_image_url === "string" ? (value as any).price_image_url : "",
     base_price_text:
       typeof (value as any).base_price_text === "string" ? (value as any).base_price_text : "",
+    inStock:
+      typeof (value as any).inStock === "boolean" ? (value as any).inStock : true,
     created_at: typeof (value as any).created_at === "string" ? (value as any).created_at : "",
   };
 }
